@@ -25,8 +25,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 
 // side navigation menu bar content displayer
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
-.then(res=>(res.json()))
-.then(data=>{
+.then(res=>(res.json())).then(data=>{
 
  let i = 0
  do{
@@ -34,7 +33,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
   data2= data.films[i]
   // data =data.films;print(data[0].title)
   const side = document.querySelectorAll('a.others'); 
-  print (side[i])
+  // print (side[i])
   side[i].textContent = data2.title
 //  print(data2.title)
  }while(i<14)   
@@ -57,8 +56,15 @@ function openNav() {
   });
   print(`hello`)
 
+  const as = document.querySelectorAll('a.others');print(as)
+  addEventListener('onClick',()=>{
+  print("done")
   fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
+  print(data)
+  
+   
+  })
 
 })
