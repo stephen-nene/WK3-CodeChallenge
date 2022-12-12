@@ -26,8 +26,11 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
 
- let i = 0
- print(data[i].title)
+ let data2 = data.films[0]
+ do{
+  data2+=1
+ print(data2)
+ }while(i<5)
     
   data =data.films;print(data[0].title)
     const side = document.querySelectorAll('a.others'); print (side[0])
