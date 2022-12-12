@@ -3,6 +3,11 @@
     width: 18rem;
     
 } */
+#openNav{
+  background-color: green;
+  border-color:green;
+  /* color:green; */
+}
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
