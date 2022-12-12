@@ -1,7 +1,7 @@
 print =  (value) => {console.log(value)}
 // fetch("https://raw.githubusercontent.com/stephen-nene/WK3-CodeChallenge/main/db.json")
 // .then(res=>(res.json())).then(data=> {
-  const API = 
+  const API = 'https://stephen-nene.github.io/WK3-CodeChallenge/db.json'
     console.log(data[0]);print(res)
     // selector for our first movie poster
     image = document.querySelector('img.img-fluid')
