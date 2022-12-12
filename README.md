@@ -10,6 +10,8 @@ Flatiron Movie Theater is open for business! You will be building out an applica
 * patience
 
 ## setup
+
+live link at [click me](https://stephen-nene.github.io/WK3-CodeChallenge/)
 clone app from [here](https://github.com/stephen-nene/WK3-CodeChallenge)
 
 Run this command to get the backend started:

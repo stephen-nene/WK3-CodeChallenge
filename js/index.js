@@ -1,6 +1,7 @@
 print =  (value) => {console.log(value)}
 fetch("https://stephen-nene.github.io/WK3-CodeChallenge/db.json")
-.then(res=>(res.json())).then(data=> {
+.then(res=>(res.json()))
+.then(data=> {
     console.log(data[0]);
     // print(res)
     // selector for our first movie poster
