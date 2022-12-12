@@ -1,5 +1,6 @@
 print =  (value) => {console.log(value)}
-fetch("http://localhost:3000/films").then(res=>(res.json())).then(data=> {
+fetch("https://raw.githubusercontent.com/stephen-nene/WK3-CodeChallenge/main/db.json")
+.then(res=>(res.json())).then(data=> {
     console.log(data[0])
     // selector for our first movie poster
     image = document.querySelector('img.img-fluid')
