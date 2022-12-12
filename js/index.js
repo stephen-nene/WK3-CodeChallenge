@@ -26,9 +26,8 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
   data =data.films
-    const side = document.querySelector('#0')
-    print (side)
-
+    const side = document.querySelectorAll('a.others'); print (side)
+    
 
 })
 
