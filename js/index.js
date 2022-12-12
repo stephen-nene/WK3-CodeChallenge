@@ -25,16 +25,13 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
-  let x = 0
-  let counter = 0
-  while(counter < 15){
-    counter++;
-    X += counter
+ 
+    
   data =data.films;print(data[x].title)
     const side = document.querySelectorAll('a.others'); print (side[x])
-    print(x)
+    // print(x)
     side[x].innerText = data[x].title
-  }
+  }while (counter < 15)
 
         
 
