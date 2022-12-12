@@ -32,12 +32,13 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
   data2= data.films[i]
   // data =data.films;print(data[0].title)
   const side = document.querySelectorAll('a.others'); 
-  // print (side.textContent)
+  print (side.textContent)
   // side.textContent = data2.title
- print(data2.title)
+//  print(data2.title)
 
  }while(i<14)   
-    // print(x)
+//  const side = document.querySelectorAll('a.others'); 
+//  print (side[0].textContent)
   })
 
 document.getElementById("openNav").addEventListener("click", 
