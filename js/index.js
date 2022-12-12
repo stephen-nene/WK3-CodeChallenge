@@ -1,9 +1,10 @@
 print =  (value) => {console.log(value)}
-fetch("https://stephen-nene.github.io/WK3-CodeChallenge/db.json")
+fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
+// print(res)
 .then(res=>(res.json()))
 .then(data=> {
-    console.log(data[0]);
-    // print(res)
+    // console.log(data.films[0]);
+    data=data.films
     // selector for our first movie poster
     image = document.querySelector('img.img-fluid')
     title = document.querySelector('h5')
