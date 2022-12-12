@@ -6,7 +6,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     // console.log(data.films[0]);
      data=data.films
     // selector for our first movie poster
-    image = document.querySelector('img.img-fluid')
+    image = document.querySelector('img.card-img-top')
     title = document.querySelector('h5')
     description = document.querySelector('.card-text')
     info = document.querySelectorAll('li.info')
@@ -22,6 +22,8 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     footer.textContent = `tickets-Remaining:${remainder}`  
 })
 
+
+// side navigation menu bar content displayer
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
@@ -35,27 +37,28 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
   print (side[i])
   side[i].textContent = data2.title
 //  print(data2.title)
-
  }while(i<14)   
  const side = document.querySelectorAll('a.others'); 
  print (side[0].textContent)
   })
-
+  // side bar navigation menu displayer
 document.getElementById("openNav").addEventListener("click", 
 function openNav() {
     document.getElementById("mySidenav").style.width = "350px";
     document.querySelector('div.header').style.marginLeft = "350px";
     document.querySelector('div.card').style.marginLeft = "350px";
     // print( document.getElementById("mySidenav"))
-  }
-  );
+  });
   document.getElementById("closeNav").addEventListener("click", 
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.querySelector('div.header').style.marginLeft = "0";
     document.querySelector('div.card').style.marginLeft = "0";
-  }
-
-  );
+  });
   print(`hello`)
 
+  fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
+.then(res=>(res.json()))
+.then(data=>{
+
+})

@@ -3,6 +3,10 @@
     width: 18rem;
     
 } */
+
+div.card{
+  height: 600px;
+}
 #openNav{
   background-color: green;
   border-color:green;
