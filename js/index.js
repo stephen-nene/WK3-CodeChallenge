@@ -4,7 +4,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=> {
     // console.log(data.films[0]);
-    data=data.films
+     data=data.films
     // selector for our first movie poster
     image = document.querySelector('img.img-fluid')
     title = document.querySelector('h5')
@@ -22,9 +22,13 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     footer.textContent = `tickets-Remaining:${remainder}`  
 })
 
-fetch("http://localhost:3000/films").then(res=>(res.json()))
+fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
+.then(res=>(res.json()))
 .then(data=>{
-    document.querySelector('.list')
+  data =data.films
+    const side = document.querySelector('div.mySideNav')
+    print (side)
+
 
 })
 
