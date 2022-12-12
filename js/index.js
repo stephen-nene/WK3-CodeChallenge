@@ -9,7 +9,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     image = document.querySelector('img.img-fluid')
     title = document.querySelector('h5')
     description = document.querySelector('.card-text')
-    info = document.querySelectorAll('li')
+    info = document.querySelectorAll('li.info')
     footer = document.querySelector('small'); print(info)
     // descrition
     image.src = data[0].poster 
@@ -25,17 +25,23 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
-  data =data.films
-    const side = document.querySelectorAll('a.others'); print (side)
-    
+  let x = 0
+  while(x < data.films.length){
+  data =data.films;print(data[x].title)
+    const side = document.querySelectorAll('a.others'); print (side[x])
+    print(data.films.length)
+    side[x].innerText = data[x].title
+  }
+
+        
 
 })
 
 document.getElementById("openNav").addEventListener("click", 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.querySelector('div.header').style.marginLeft = "250px";
-    document.querySelector('div.card').style.marginLeft = "250px";
+    document.getElementById("mySidenav").style.width = "350px";
+    document.querySelector('div.header').style.marginLeft = "350px";
+    document.querySelector('div.card').style.marginLeft = "350px";
     // print( document.getElementById("mySidenav"))
   }
   );
