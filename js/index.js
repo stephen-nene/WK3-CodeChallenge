@@ -25,17 +25,15 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
- 
+
+ let i = 0
+ print(data[i].title)
     
-  data =data.films;print(data[x].title)
-    const side = document.querySelectorAll('a.others'); print (side[x])
+  data =data.films;print(data[0].title)
+    const side = document.querySelectorAll('a.others'); print (side[0])
     // print(x)
-    side[x].innerText = data[x].title
-  }while (counter < 15)
-
-        
-
-})
+    side[0].innerText = data[0].title
+  })
 
 document.getElementById("openNav").addEventListener("click", 
 function openNav() {
