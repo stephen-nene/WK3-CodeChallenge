@@ -1,7 +1,8 @@
 print =  (value) => {console.log(value)}
-fetch("https://raw.githubusercontent.com/stephen-nene/WK3-CodeChallenge/main/db.json")
-.then(res=>(res.json())).then(data=> {
-    console.log(data[0])
+// fetch("https://raw.githubusercontent.com/stephen-nene/WK3-CodeChallenge/main/db.json")
+// .then(res=>(res.json())).then(data=> {
+  const API = 
+    console.log(data[0]);print(res)
     // selector for our first movie poster
     image = document.querySelector('img.img-fluid')
     title = document.querySelector('h5')
@@ -17,7 +18,7 @@ fetch("https://raw.githubusercontent.com/stephen-nene/WK3-CodeChallenge/main/db.
     info[2].textContent = `Tickets-Sold =  ${data[0].tickets_sold}`
     remainder = (data[0].capacity)-(data[0].tickets_sold)
     footer.textContent = `tickets-Remaining:${remainder}`  
-})
+// })
 
 fetch("http://localhost:3000/films").then(res=>(res.json()))
 .then(data=>{
