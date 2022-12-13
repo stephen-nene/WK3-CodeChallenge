@@ -10,7 +10,8 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     title = document.querySelector('h5')
     description = document.querySelector('.card-text')
     info = document.querySelectorAll('li.info')
-    footer = document.querySelector('small'); print(info)
+    footer = document.querySelector('small'); 
+    // print(info)
     // descrition
     image.src = data[0].poster 
     title.textContent = data[0].title
@@ -56,9 +57,10 @@ function openNav() {
   });
   // print(`hello`)
 
-  const as = document.querySelectorAll('a.others');
-  print(as[14].textContent)
-  as[0].addEventListener('Click',(e)=>{
+  const as = document.querySelector('a.others');
+  print(as);
+  function displayMovies(){
+  as.addEventListener('Click',(e)=>{
     print(e)
   print("done")
   fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
@@ -69,4 +71,4 @@ function openNav() {
    
   })
 
-})
+})}
