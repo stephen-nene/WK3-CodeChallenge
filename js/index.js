@@ -54,10 +54,12 @@ function openNav() {
     document.querySelector('div.header').style.marginLeft = "0";
     document.querySelector('div.card').style.marginLeft = "0";
   });
-  print(`hello`)
+  // print(`hello`)
 
-  const as = document.querySelectorAll('a.others');print(as)
-  addEventListener('onClick',()=>{
+  const as = document.querySelectorAll('a.others');
+  print(as[14].textContent)
+  as[0].addEventListener('Click',(e)=>{
+    print(e)
   print("done")
   fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
