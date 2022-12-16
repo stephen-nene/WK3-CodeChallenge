@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
   selectElems()
   
   fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
-// print(res)
-.then(res=>(res.json()))
-.then(data=> {
-     data=data.films
+  .then(res=>(res.json()))
+  .then(data=> {
+    data=data.films
+    print(data)
     // selector for our first movie poster
     image.src = data[0].poster 
     title.textContent = data[0].title
@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     footer.textContent = `${remainder}`  
 })
 
+
+
 // side navigation menu bar content displayer
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 .then(res=>(res.json()))
 .then(data=>{
- let i = 0
+ let i = -1
  do{
   i+=1
   data2= data.films[i]
@@ -50,10 +52,23 @@ function openNav() {
   // print(`hello`)
 
   
-  print(side);
-  side
+  print(side[1]);
+  const container = document.querySelectorAll('a.others');
+  side.forEach(side =>{
+    side.addEventListener('click', (e) => {
+      e.preventDefault()
+      print(e.target)
+      const index = Array.prototype.indexOf.call(side.parentNode.children, side);
+      console.log(`The index of the clicked a tag is ${index}.`); 
+      print(index)
+displayMovie()
+
+    });
+  })
+
 
 })
+
 
 selectElems = () =>{
   openNav = document.getElementById("openNav")
@@ -65,3 +80,7 @@ selectElems = () =>{
   side = document.querySelectorAll('a.others'); 
   const as = document.querySelectorAll('a.others');
 };
+
+displayMovie=()=>{
+
+}
