@@ -53,7 +53,7 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.querySelector('div.header').style.marginLeft = "0";
-    document.querySelector('div.card').style.marginLeft = "50";
+    document.querySelector('div.card').style.marginRight = "50";
   });
   // print(`hello`)
 

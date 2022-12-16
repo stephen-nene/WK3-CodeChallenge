@@ -12,9 +12,9 @@ btn.addEventListener('click', function(e){
         document.querySelector('#number').textContent  = number-1 
     }
     else {
+        document.querySelector('#buy-ticket').textContent = "sold-out"
         alert("sold out,try again earlier next time") 
         btn.className = "btn btn-danger"
         btn.classList.add('')
-        document.querySelector('#available-ticket').textContent = "sold-out"
 }})
 
