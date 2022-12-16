@@ -50,10 +50,6 @@ function openNav() {
   });
   // print(`hello`)
 
-
- 
-
-
   const container = document.querySelectorAll('a.others');
   side.forEach(side =>{
     side.addEventListener('click', (e) => {
@@ -62,14 +58,13 @@ function openNav() {
       .then(res=>(res.json()))
         .then(data=> {
           data3 = data.films
-          // print(data[0])
           let i = Array.prototype.indexOf.call(side.parentNode.children, side);
           image.src = data3[i].poster 
             title.textContent = data3[i].title
             description.textContent = data3[i].description
-            info[i].textContent = `Showtime =   ${data3[i].showtime}`
-            info[i].textContent = `Runtime =   ${data3[i].runtime} mins`
-            info[i].textContent = `Tickets-Sold =  ${data3[i].tickets_sold}`
+            info[0].textContent = `Showtime =   ${data3[i].showtime}`
+            info[1].textContent = `Runtime =   ${data3[i].runtime} mins`
+            info[2].textContent = `Tickets-Sold =  ${data3[i].tickets_sold}`
             remainder = (data3[i].capacity)-(data3[i].tickets_sold)
             footer.textContent = `${remainder}` 
           
