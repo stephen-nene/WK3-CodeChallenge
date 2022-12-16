@@ -26,8 +26,8 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 
 // side navigation menu bar content displayer
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
-.then(res=>(res.json())).then(data=>{
-
+.then(res=>(res.json()))
+.then(data=>{
  let i = 0
  do{
   i+=1
@@ -53,12 +53,12 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.querySelector('div.header').style.marginLeft = "0";
-    document.querySelector('div.card').style.marginLeft = "0";
+    document.querySelector('div.card').style.marginLeft = "50";
   });
   // print(`hello`)
 
   const as = document.querySelector('a.others');
-  print(as);
+  // print(as);
   function displayMovies(){
   as.addEventListener('Click',(e)=>{
     print(e)
