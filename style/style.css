@@ -1,13 +1,13 @@
-/* #movie-container{
+#movie-container{
     background-color: aqua;
     width: 18rem;
     
-} */
+}
 
 div.card{
-  /* position: fixed; */
-  width: 45%; /* Set the width of the div element */
   margin: auto; /* Center the div element horizontally */
+  padding: 20px;
+  width: 40rem; /* Set the width of the div element */
   text-align: center; /* Center the content of the div element */
 }
 #openNav{

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   .then(res=>(res.json()))
   .then(data=> {
     data=data.films
-    print(data)
+    // print(data)
     // selector for our first movie poster
     image.src = data[0].poster 
     title.textContent = data[0].title
@@ -32,7 +32,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
   side[i].textContent = data2.title
 //  print(data2.title)
  }while(i<14)   
- print (side[0].textContent)
+//  print (side[0].textContent)
   })
   // side bar navigation menu displayer
 openNav.addEventListener("click", 
