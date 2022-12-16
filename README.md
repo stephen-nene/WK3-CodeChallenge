@@ -30,6 +30,12 @@ Then, open the index.html file on your browser to run the application.
 Write your code in the index.js file. The base URL for your API will be
   http://localhost:3000.
 
+  ## deliverables
+- when a user reloads the page it should display the first movie in our list json server
+- User should be able to select the desired movie and it display on the main page contents
+- bying a ticket reduces the number of tickets and when all tickets are sold out the website alerts the user and the button turns red 
+
+
 ## Core Deliverables
 1. See the first movie's details, including its **poster, title, runtime,
    showtime, and available tickets** when the page loads. The number of
