@@ -1,19 +1,21 @@
 print =  (value) => {console.log(value)}
-document.addEventListener('DOMContentLoaded', ()=>
-{fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
-// print(res)
-.then(res=>(res.json()))
-.then(data=> {
-    // console.log(data.films[0]);
-     data=data.films
-    // selector for our first movie poster
+document.addEventListener('DOMContentLoaded', ()=>{
+  selectElems = () =>{
+    openNav = document.getElementById("openNav")
     image = document.querySelector('img.card-img-top')
     title = document.querySelector('h5')
     description = document.querySelector('.card-text')
     info = document.querySelectorAll('li.info')
     footer = document.querySelector('small#number'); 
-    // print(info)
-    // descrition
+    side = document.querySelectorAll('a.others'); 
+  };
+  fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
+// print(res)
+.then(res=>(res.json()))
+.then(data=> {
+    selectElems()
+     data=data.films
+    // selector for our first movie poster
     image.src = data[0].poster 
     title.textContent = data[0].title
     description.textContent = data[0].description
@@ -23,8 +25,6 @@ document.addEventListener('DOMContentLoaded', ()=>
     remainder = (data[0].capacity)-(data[0].tickets_sold)
     footer.textContent = `${remainder}`  
 })
-const side = document.querySelectorAll('a.others'); 
-
 
 // side navigation menu bar content displayer
 fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
@@ -42,7 +42,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
  print (side[0].textContent)
   })
   // side bar navigation menu displayer
-document.getElementById("openNav").addEventListener("click", 
+openNav.addEventListener("click", 
 function openNav() {
     document.getElementById("mySidenav").style.width = "350px";
     document.querySelector('div.header').style.marginLeft = "350px";
