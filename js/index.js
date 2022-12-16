@@ -1,19 +1,11 @@
 print =  (value) => {console.log(value)}
 document.addEventListener('DOMContentLoaded', ()=>{
-  selectElems = () =>{
-    openNav = document.getElementById("openNav")
-    image = document.querySelector('img.card-img-top')
-    title = document.querySelector('h5')
-    description = document.querySelector('.card-text')
-    info = document.querySelectorAll('li.info')
-    footer = document.querySelector('small#number'); 
-    side = document.querySelectorAll('a.others'); 
-  };
+  selectElems()
+  
   fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 // print(res)
 .then(res=>(res.json()))
 .then(data=> {
-    selectElems()
      data=data.films
     // selector for our first movie poster
     image.src = data[0].poster 
@@ -57,15 +49,19 @@ function openNav() {
   });
   // print(`hello`)
 
-  const as = document.querySelector('a.others');
-  // print(as);
-  function displayMovies(){
-  as.addEventListener('Click',(e)=>{
-    print(e)
-  print("done")
-  fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
-.then(res=>(res.json()))
-.then(data=>{
-  print(data)
   
- })})}})
+  print(side);
+  side
+
+})
+
+selectElems = () =>{
+  openNav = document.getElementById("openNav")
+  image = document.querySelector('img.card-img-top')
+  title = document.querySelector('h5')
+  description = document.querySelector('.card-text')
+  info = document.querySelectorAll('li.info')
+  footer = document.querySelector('small#number'); 
+  side = document.querySelectorAll('a.others'); 
+  const as = document.querySelectorAll('a.others');
+};
