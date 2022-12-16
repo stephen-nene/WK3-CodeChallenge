@@ -12,6 +12,7 @@ btn.addEventListener('click', function(e){
     print(number)
     if(number > 0){
         document.querySelector('#number').textContent  = number-1 
+
     }
     else {
         document.querySelector('#buy-ticket').textContent = "sold-out"
