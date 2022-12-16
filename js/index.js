@@ -1,5 +1,6 @@
 print =  (value) => {console.log(value)}
-fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
+document.addEventListener('DOMContentLoaded', ()=>
+{fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
 // print(res)
 .then(res=>(res.json()))
 .then(data=> {
@@ -10,7 +11,7 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     title = document.querySelector('h5')
     description = document.querySelector('.card-text')
     info = document.querySelectorAll('li.info')
-    footer = document.querySelector('small'); 
+    footer = document.querySelector('small#number'); 
     // print(info)
     // descrition
     image.src = data[0].poster 
@@ -20,8 +21,9 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
     info[1].textContent = `Runtime =   ${data[0].runtime} mins`
     info[2].textContent = `Tickets-Sold =  ${data[0].tickets_sold}`
     remainder = (data[0].capacity)-(data[0].tickets_sold)
-    footer.textContent = `tickets-Remaining:${remainder}`  
+    footer.textContent = `${remainder}`  
 })
+const side = document.querySelectorAll('a.others'); 
 
 
 // side navigation menu bar content displayer
@@ -33,12 +35,10 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
   i+=1
   data2= data.films[i]
   // data =data.films;print(data[0].title)
-  const side = document.querySelectorAll('a.others'); 
   // print (side[i])
   side[i].textContent = data2.title
 //  print(data2.title)
  }while(i<14)   
- const side = document.querySelectorAll('a.others'); 
  print (side[0].textContent)
   })
   // side bar navigation menu displayer
@@ -68,7 +68,4 @@ function openNav() {
 .then(data=>{
   print(data)
   
-   
-  })
-
-})}
+ })})}})
