@@ -2,6 +2,8 @@ const API = 'https://stephen-nene.github.io/WK3-CodeChallenge/db.json'
 fetching = fetch(API)
 print =  (value) => {console.log(value)};
 
+
+
 // reduce the number of tickets 
 const btn = document.getElementById('buy-ticket')
 btn.addEventListener('click', function(e){
@@ -17,4 +19,6 @@ btn.addEventListener('click', function(e){
         btn.className = "btn btn-danger"
         btn.classList.add('')
 }})
+
+
 

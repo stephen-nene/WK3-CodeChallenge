@@ -28,7 +28,6 @@ fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
  do{
   i+=1
   data2= data.films[i]
-  // data =data.films;print(data[0].title)
   // print (side[i])
   side[i].textContent = data2.title
 //  print(data2.title)
@@ -51,19 +50,30 @@ function openNav() {
   });
   // print(`hello`)
 
-  
-  print(side[1]);
+
+ 
+
+
   const container = document.querySelectorAll('a.others');
   side.forEach(side =>{
     side.addEventListener('click', (e) => {
       e.preventDefault()
-      print(e.target)
-      const index = Array.prototype.indexOf.call(side.parentNode.children, side);
-      console.log(`The index of the clicked a tag is ${index}.`); 
-      print(index)
-displayMovie()
-
-    });
+      fetch('https://stephen-nene.github.io/WK3-CodeChallenge/db.json')
+      .then(res=>(res.json()))
+        .then(data=> {
+          data3 = data.films
+          // print(data[0])
+          let i = Array.prototype.indexOf.call(side.parentNode.children, side);
+          image.src = data3[i].poster 
+            title.textContent = data3[i].title
+            description.textContent = data3[i].description
+            info[i].textContent = `Showtime =   ${data3[i].showtime}`
+            info[i].textContent = `Runtime =   ${data3[i].runtime} mins`
+            info[i].textContent = `Tickets-Sold =  ${data3[i].tickets_sold}`
+            remainder = (data3[i].capacity)-(data3[i].tickets_sold)
+            footer.textContent = `${remainder}` 
+          
+        })});
   })
 
 
@@ -81,6 +91,8 @@ selectElems = () =>{
   const as = document.querySelectorAll('a.others');
 };
 
+
 displayMovie=()=>{
+
 
 }
